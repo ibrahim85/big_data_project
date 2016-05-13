@@ -1,0 +1,17 @@
+First make sure to install the Basemap package. The installation is a bit tricky. First install the package from:
+
+http://matplotlib.org/basemap/users/installing.html
+
+Then refer to this Stackoverflow thread for the solution that worked for me:
+
+http://stackoverflow.com/questions/28157212/python-basemap-import-error
+
+Make sure the code file is in the same location as the folder entitled NYC, as it contains the shapefiles needed for the drawing.
+
+To run the code, you can either call it from the terminal using:
+
+python draw_trips.py <filename> <latitude_index> <longitude_index>
+
+or you can use it from code by calling the function:
+
+draw(<longitudes_list>,<latitudes_list>)

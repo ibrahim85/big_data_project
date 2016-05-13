@@ -1,0 +1,8 @@
+setup.py
+pyshpgeocode.egg-info/PKG-INFO
+pyshpgeocode.egg-info/SOURCES.txt
+pyshpgeocode.egg-info/dependency_links.txt
+pyshpgeocode.egg-info/namespace_packages.txt
+pyshpgeocode.egg-info/not-zip-safe
+pyshpgeocode.egg-info/requires.txt
+pyshpgeocode.egg-info/top_level.txt

@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: pyshpgeocode
+Version: 0.1
+Summary: reverse geocoding using shapefiles
+Home-page: http://okfnlabs.org
+Author: Gregor Aisch
+Author-email: gregor.aisch@okfn.org
+License: MIT
+Description: 
+        shpgeocode is a library for reverse geocoding using ESRI shapefiles
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python

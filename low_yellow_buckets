@@ -1,0 +1,42 @@
+weekhour,weekday,neighborhood,observed,expected,type
+3,Mon,Chelsea and Clinton,23801,75539.0440389287,yellow
+4,Mon,Chelsea and Clinton,23631,73131.8502509764,yellow
+2,Tue,Chelsea and Clinton,33695,90814.9713574522,yellow
+3,Tue,Chelsea and Clinton,22649,85745.1133394717,yellow
+4,Tue,Chelsea and Clinton,21376,83012.6839474388,yellow
+5,Tue,Chelsea and Clinton,30323,82588.8049833542,yellow
+2,Wed,Chelsea and Clinton,37878,90837.6002139648,yellow
+3,Wed,Chelsea and Clinton,25089,85766.4789121016,yellow
+4,Wed,Chelsea and Clinton,23744,83033.3686658909,yellow
+5,Wed,Chelsea and Clinton,30593,82609.3840815973,yellow
+16,Wed,Chelsea and Clinton,108075,184832.491209966,yellow
+3,Thu,Chelsea and Clinton,33807,87802.0148066533,yellow
+4,Thu,Chelsea and Clinton,28670,85004.0383786838,yellow
+5,Thu,Chelsea and Clinton,32734,84569.9911702623,yellow
+16,Thu,Chelsea and Clinton,103005,189219.207035421,yellow
+16,Fri,Chelsea and Clinton,99051,178286.086941122,yellow
+5,Sat,Chelsea and Clinton,34101,84363.7734246061,yellow
+6,Sat,Chelsea and Clinton,35129,86283.1288343151,yellow
+2,Mon,Gramercy Park and Murray Hill,11414,55698.3712266285,yellow
+3,Mon,Gramercy Park and Murray Hill,7180,52588.9408129988,yellow
+4,Mon,Gramercy Park and Murray Hill,9017,50913.0952519297,yellow
+2,Tue,Gramercy Park and Murray Hill,14501,63223.7700968259,yellow
+3,Tue,Gramercy Park and Murray Hill,8612,59694.224990318,yellow
+4,Tue,Gramercy Park and Murray Hill,8951,57791.9561781887,yellow
+2,Wed,Gramercy Park and Murray Hill,16730,63239.5239048194,yellow
+3,Wed,Gramercy Park and Murray Hill,9988,59709.0993225096,yellow
+4,Wed,Gramercy Park and Murray Hill,9708,57806.3565117943,yellow
+2,Thu,Gramercy Park and Murray Hill,20843,64740.4170567296,yellow
+3,Thu,Gramercy Park and Murray Hill,11836,61126.2032591989,yellow
+4,Thu,Gramercy Park and Murray Hill,11323,59178.3017648297,yellow
+5,Sat,Gramercy Park and Murray Hill,15288,58732.5606755292,yellow
+1,Tue,Upper East Side,9013,47746.7185635501,yellow
+2,Tue,Upper East Side,5311,44137.9826409337,yellow
+3,Tue,Upper East Side,3680,41673.9252080591,yellow
+4,Tue,Upper East Side,5836,40345.9071591581,yellow
+1,Wed,Upper East Side,9945,47758.6158710884,yellow
+2,Wed,Upper East Side,5901,44148.9807402669,yellow
+3,Wed,Upper East Side,4111,41684.3093249041,yellow
+2,Thu,Upper East Side,6896,45196.7891165067,yellow
+3,Thu,Upper East Side,4803,42673.6225035109,yellow
+4,Thu,Upper East Side,6388,41313.7472190562,yellow

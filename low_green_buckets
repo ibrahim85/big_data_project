@@ -1,0 +1,38 @@
+weekhour,weekday,neighborhood,observed,expected,type
+2,Thu,East Harlem,516,3124.68858587435,green
+3,Thu,East Harlem,339,2808.42140859783,green
+2,Fri,East Harlem,678,3341.95821449393,green
+3,Fri,East Harlem,424,3003.69996506319,green
+16,Tue,Greenpoint,2811,6491.59548620593,green
+16,Wed,Greenpoint,2890,6690.56125427485,green
+14,Thu,Greenpoint,2400,5934.7089712091,green
+15,Thu,Greenpoint,2707,6603.03946054938,green
+16,Thu,Greenpoint,3245,7180.61475987146,green
+13,Fri,Greenpoint,1968,5616.69450177724,green
+14,Fri,Greenpoint,2352,6347.36833827978,green
+15,Fri,Greenpoint,3101,7062.16999209724,green
+7,Sat,Greenpoint,825,3895.42077010455,green
+8,Sat,Greenpoint,1031,4071.11288350953,green
+5,Sun,Northwest Brooklyn,1260,4390.35934496616,green
+6,Sun,Northwest Brooklyn,1014,4290.77359767291,green
+7,Sun,Northwest Brooklyn,1125,4338.05366058396,green
+3,Mon,Northwest Brooklyn,630,3736.51584793777,green
+4,Mon,Northwest Brooklyn,581,3435.96786820839,green
+2,Tue,Northwest Brooklyn,1002,4487.68684380437,green
+3,Tue,Northwest Brooklyn,495,4033.4630030648,green
+4,Tue,Northwest Brooklyn,463,3709.02997341409,green
+2,Wed,Northwest Brooklyn,1145,4625.23331625905,green
+3,Wed,Northwest Brooklyn,515,4157.08762910437,green
+4,Wed,Northwest Brooklyn,463,3822.7108087371,green
+5,Wed,Northwest Brooklyn,803,3617.11444010419,green
+2,Thu,Northwest Brooklyn,1215,4964.0108439869,green
+3,Thu,Northwest Brooklyn,592,4461.5755918165,green
+4,Thu,Northwest Brooklyn,578,4102.70717399073,green
+5,Thu,Northwest Brooklyn,821,3882.05179650081,green
+2,Fri,Northwest Brooklyn,1923,5309.17445402225,green
+3,Fri,Northwest Brooklyn,913,4771.80326579154,green
+4,Fri,Northwest Brooklyn,795,4387.98157479263,green
+5,Fri,Northwest Brooklyn,892,4151.98332053193,green
+5,Sat,Northwest Brooklyn,1108,5209.91953829673,green
+6,Sat,Northwest Brooklyn,1089,5091.74385157218,green
+7,Sat,Northwest Brooklyn,1452,5147.84981105693,green

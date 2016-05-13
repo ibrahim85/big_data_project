@@ -6,6 +6,7 @@ require(glmnet)
 require(ggplot2)
 require(dplyr)
 require(gridExtra)
+require(lme4)
 
 green <- read.table("green_buckets", sep=",", stringsAsFactors = F)
 uber <- read.table("uber_buckets", sep=",", stringsAsFactors = F)
@@ -326,7 +327,7 @@ plot.neighborhoods.color <- function(neighborhoods.interest, colorcab = "yellow"
   nb.plot <- nb.plot + labs(color = "Neighborhood", linetype = "Number of Pickups", 
                   x = "Hour of Week", y = "Total Number of Pickups") + 
     scale_linetype_manual(values = c(4, 1)) + theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
-    scale_x_discrete(breaks = 24*0:6, labels = levels(neighborhoods_yellow$weekday))
+    scale_x_discrete(breaks = 24*0:6, labels = levels(neighborhoods_use$weekday))
   nb.plot
 }
 
@@ -335,8 +336,8 @@ neighborhoods.interest <- c("LaGuardia Airport", "Bushwick and Williamsburg", "E
 neighborhoods.interest2 <- c("Chelsea and Clinton", "Upper East Side", "Greenwich Village and Soho",
                              "Lower East Side")
 
-q1 <- plot.neighborhoods.color(neighborhoods.interest) + title("Yellow Cabs")
-q2 <- plot.neighborhoods.color(neighborhoods.interest2) + title("Yellow Cabs")
+q1 <- plot.neighborhoods.color(neighborhoods.interest) + ggtitle("Yellow Cabs")
+q2 <- plot.neighborhoods.color(neighborhoods.interest2) + ggtitle("Yellow Cabs")
 q1
 q2
 
@@ -363,6 +364,9 @@ p2 <- ggplot(hourly.counts, aes(x=weekhour, y=log(`sum(count)`))) + geom_smooth(
 p2
 
 grid.arrange(p1,p2, nrow=1, widths = c(600, 700))
+
+sum(combined.cv.poisson$glmnet.fit$beta[,100] != 0)
+combined.cv.poisson$glmnet.fit$beta[,100]
 
 save.image("parse_buckets.RData")
 

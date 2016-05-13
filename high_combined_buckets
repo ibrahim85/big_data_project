@@ -1,0 +1,120 @@
+weekhour,weekday,neighborhood,observed,expected,type
+0,Sun,Bushwick and Williamsburg,4497,1001.39490011917,green
+1,Sun,Bushwick and Williamsburg,4803,889.618347626805,green
+2,Sun,Bushwick and Williamsburg,4482,796.749056111892,green
+3,Sun,Bushwick and Williamsburg,3607,713.097175082908,green
+1,Sat,Bushwick and Williamsburg,4079,1073.82581302427,green
+2,Sat,Bushwick and Williamsburg,3853,953.65281022689,green
+0,Sun,Central Brooklyn,5503,1747.69286422261,green
+8,Tue,Central Harlem,4545,1318.69870247375,green
+8,Wed,Central Harlem,4599,1359.85359676981,green
+8,Thu,Central Harlem,4858,1459.96615587082,green
+0,Sun,Chelsea and Clinton,186064,97969.5781219734,yellow
+1,Sun,Chelsea and Clinton,165961,89147.892885185,yellow
+21,Thu,Chelsea and Clinton,14185,7631.58314332076,uber
+8,Mon,East Harlem,6399,2174.75412068563,green
+9,Mon,East Harlem,6583,2346.60542873822,green
+8,Tue,East Harlem,7114,2322.45734927443,green
+9,Tue,East Harlem,7221,2527.19660074126,green
+8,Wed,East Harlem,6774,2415.21443422856,green
+9,Wed,East Harlem,7054,2606.06716364828,green
+8,Tue,Gramercy Park and Murray Hill,134368,66320.0407299691,yellow
+17,Tue,Gramercy Park and Murray Hill,12791,6349.90151900691,uber
+8,Wed,Gramercy Park and Murray Hill,134459,66333.9517766256,yellow
+17,Wed,Gramercy Park and Murray Hill,12581,6668.48670237631,uber
+8,Thu,Gramercy Park and Murray Hill,134090,67910.2821810475,yellow
+0,Sun,Greenpoint,20164,5304.38469974095,green
+0,Sun,Greenpoint,21644,3006.42226968217,yellow
+0,Sun,Greenpoint,2398,563.207271948471,uber
+1,Sun,Greenpoint,21632,4672.74408831689,green
+1,Sun,Greenpoint,23510,2735.65467964154,yellow
+2,Sun,Greenpoint,20895,4114.9738261949,green
+2,Sun,Greenpoint,19605,2529.13032209296,yellow
+3,Sun,Greenpoint,17682,3682.93653878844,green
+3,Sun,Greenpoint,14449,2388.23960468694,yellow
+4,Sun,Greenpoint,11207,3430.91217227921,green
+23,Thu,Greenpoint,12260,5398.13938508756,green
+0,Fri,Greenpoint,11417,5010.93657232082,green
+23,Fri,Greenpoint,18279,8531.49654936633,green
+0,Sat,Greenpoint,19749,6348.9769289693,green
+0,Sat,Greenpoint,18748,3382.24160070155,yellow
+1,Sat,Greenpoint,20337,5592.94736167052,green
+1,Sat,Greenpoint,19650,3077.62657160456,yellow
+2,Sat,Greenpoint,19620,4925.33542808459,green
+2,Sat,Greenpoint,17245,2845.22952624262,yellow
+3,Sat,Greenpoint,16125,4445.53817221893,green
+4,Sat,Greenpoint,9896,4106.5615448639,green
+22,Sat,Greenpoint,16561,8098.30738223916,green
+23,Sat,Greenpoint,19078,7203.33781996425,green
+0,Sun,Greenwich Village and Soho,96409,34116.5783057471,yellow
+0,Sun,Greenwich Village and Soho,6809,2002.63455978781,uber
+1,Sun,Greenwich Village and Soho,95537,31043.9348579403,yellow
+2,Sun,Greenwich Village and Soho,85421,28699.7522322904,yellow
+22,Thu,Greenwich Village and Soho,8587,4031.99072625104,uber
+0,Sat,Greenwich Village and Soho,97372,38381.3383711693,yellow
+1,Sat,Greenwich Village and Soho,98018,34924.597580597,yellow
+2,Sat,Greenwich Village and Soho,87841,32288.0147795395,yellow
+22,Sat,Greenwich Village and Soho,8397,3419.24584772711,uber
+23,Sat,Greenwich Village and Soho,93006,42579.9938392411,yellow
+23,Sat,Greenwich Village and Soho,8300,2917.90357789963,uber
+0,Sun,Lower East Side,114334,34004.839368986,yellow
+0,Sun,Lower East Side,5799,1380.15195152363,uber
+1,Sun,Lower East Side,125974,30942.2594717741,yellow
+1,Sun,Lower East Side,4427,1202.74338580585,uber
+2,Sun,Lower East Side,121716,28605.7545350124,yellow
+3,Sun,Lower East Side,95920,27012.208625902,yellow
+7,Mon,Lower East Side,3460,1127.08142347873,uber
+7,Tue,Lower East Side,4115,1390.60878768132,uber
+7,Wed,Lower East Side,4176,1460.37795721764,uber
+0,Sat,Lower East Side,119273,38255.6314523034,yellow
+1,Sat,Lower East Side,126964,34810.21221154,yellow
+2,Sat,Lower East Side,117887,32181.6312975903,yellow
+3,Sat,Lower East Side,89991,30388.8833789851,yellow
+22,Sat,Lower East Side,6019,2356.52810043227,uber
+23,Sat,Lower East Side,104535,42440.5354446667,yellow
+23,Sat,Lower East Side,6357,2011.00537425325,uber
+0,Sun,Northwest Brooklyn,14399,7054.03416086579,green
+0,Sun,Northwest Queens,12230,5201.16111697963,green
+1,Sun,Northwest Queens,11073,4581.81226239816,green
+6,Mon,Upper East Side,3146,854.656886153645,uber
+7,Mon,Upper East Side,87978,37973.1176467503,yellow
+7,Mon,Upper East Side,4757,924.777166750035,uber
+8,Mon,Upper East Side,98615,40791.4911275407,yellow
+8,Mon,Upper East Side,3589,1034.09861259077,uber
+6,Tue,Upper East Side,3769,1054.50834896635,uber
+7,Tue,Upper East Side,109358,43103.5450840636,yellow
+7,Tue,Upper East Side,5502,1141.00297275808,uber
+8,Tue,Upper East Side,124781,46302.7000632012,yellow
+8,Tue,Upper East Side,4547,1275.86018367555,uber
+9,Tue,Upper East Side,106885,50638.6419376572,yellow
+6,Wed,Upper East Side,3842,1107.39299887557,uber
+7,Wed,Upper East Side,109661,43112.5863243904,yellow
+7,Wed,Upper East Side,5462,1198.24900093869,uber
+8,Wed,Upper East Side,123028,46312.4123464539,yellow
+8,Wed,Upper East Side,4440,1339.89859823594,uber
+9,Wed,Upper East Side,105925,50649.2637120539,yellow
+6,Thu,Upper East Side,3677,1198.58673647984,uber
+7,Thu,Upper East Side,106914,44137.0945711665,yellow
+7,Thu,Upper East Side,5373,1296.92472408949,uber
+8,Thu,Upper East Side,122075,47412.9598297348,yellow
+8,Thu,Upper East Side,4491,1450.23915602159,uber
+7,Fri,Upper East Side,97811,41432.065938153,yellow
+7,Fri,Upper East Side,4351,1205.40310703117,uber
+8,Fri,Upper East Side,117142,44508.0394459189,yellow
+9,Fri,Upper East Side,102031,48675.9232133899,yellow
+6,Mon,Upper West Side,2311,564.401280184749,uber
+7,Mon,Upper West Side,3176,610.70755440624,uber
+8,Mon,Upper West Side,2561,682.915072617163,uber
+6,Tue,Upper West Side,2909,696.366175197024,uber
+7,Tue,Upper West Side,3784,753.499502493321,uber
+8,Tue,Upper West Side,3127,842.590146052016,uber
+6,Wed,Upper West Side,2950,731.318426535909,uber
+7,Wed,Upper West Side,3674,791.303833230113,uber
+8,Wed,Upper West Side,3320,884.846885825199,uber
+6,Thu,Upper West Side,2843,791.52686819874,uber
+7,Thu,Upper West Side,3704,856.467649694649,uber
+8,Thu,Upper West Side,3338,957.713966263519,uber
+7,Fri,Upper West Side,3086,796.028286636614,uber
+2,Sun,West Queens,9816,4195.60650460113,green
+3,Sun,West Queens,9464,3755.10347108636,green
+4,Sun,West Queens,10561,3439.65217248027,green

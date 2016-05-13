@@ -1,0 +1,38 @@
+weekhour,weekday,neighborhood,observed,expected,type
+0,Sun,Bushwick and Williamsburg,4497,1022.75039062635,green
+1,Sun,Bushwick and Williamsburg,4803,898.478893571636,green
+2,Sun,Bushwick and Williamsburg,4482,795.050986887324,green
+3,Sun,Bushwick and Williamsburg,3607,714.579437642233,green
+1,Sat,Bushwick and Williamsburg,4079,1066.20036643087,green
+2,Sat,Bushwick and Williamsburg,3853,943.465294082504,green
+0,Sun,Central Brooklyn,5503,1819.00842992388,green
+8,Tue,Central Harlem,4545,1293.55657625113,green
+8,Wed,Central Harlem,4599,1333.20375979504,green
+8,Thu,Central Harlem,4858,1430.85493603152,green
+8,Mon,East Harlem,6399,2113.33107432797,green
+9,Mon,East Harlem,6583,2276.25083667106,green
+8,Tue,East Harlem,7114,2281.28102446924,green
+9,Tue,East Harlem,7221,2457.1482924327,green
+8,Wed,East Harlem,6774,2351.20171379424,green
+9,Wed,East Harlem,7054,2532.4592692645,green
+8,Thu,East Harlem,6950,2523.41665936004,green
+9,Thu,East Harlem,7294,2717.95051514328,green
+0,Sun,Greenpoint,20164,5464.80468605689,green
+1,Sun,Greenpoint,21632,4800.79177961154,green
+2,Sun,Greenpoint,20895,4248.15125823141,green
+3,Sun,Greenpoint,17682,3818.17215146273,green
+4,Sun,Greenpoint,11207,3511.05611794866,green
+23,Thu,Greenpoint,12260,5491.77083246254,green
+0,Fri,Greenpoint,11417,5168.09129359498,green
+23,Fri,Greenpoint,18279,8294.267103789,green
+0,Sat,Greenpoint,19749,6484.93448252874,green
+1,Sat,Greenpoint,20337,5696.96849998625,green
+2,Sat,Greenpoint,19620,5041.16508533091,green
+3,Sat,Greenpoint,16125,4530.92062163297,green
+4,Sat,Greenpoint,9896,4166.47441169716,green
+22,Sat,Greenpoint,16561,8290.59848636001,green
+23,Sat,Greenpoint,19078,7370.24791520932,green
+0,Sun,Northwest Queens,12230,5355.80129363514,green
+1,Sun,Northwest Queens,11073,4705.03308001459,green
+3,Sun,West Queens,9464,3842.20627536224,green
+4,Sun,West Queens,10561,3533.15704855353,green

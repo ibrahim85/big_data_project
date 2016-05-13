@@ -315,20 +315,30 @@ sunday.midnight.yellow <- filter(all.combined.buckets, type == "yellow" & weekda
 write.csv(monday.morning.yellow, "monday_9am_yellow", quote = F, row.names = F)
 write.csv(sunday.midnight.yellow, "sunday_midnight_yellow", quote = F, row.names = F)
 
+plot.neighborhoods.color <- function(neighborhoods.interest, colorcab = "yellow") {
+  neighborhoods_use <- filter(all.combined.buckets, type == colorcab & 
+                                   neighborhood %in% neighborhoods.interest)
+  neighborhoods_use$num_hour <- with(neighborhoods_use, (as.numeric(weekday)-1)*24 + weekhour)
+  nb.plot <- ggplot(neighborhoods_use, aes(x=num_hour, y = observed, 
+                  color = neighborhood, linetype = "Observed"))
+  nb.plot <- nb.plot + geom_smooth(fill=NA) + geom_smooth(aes(y = expected, 
+                  color = neighborhood, linetype = "Expected"), fill=NA) 
+  nb.plot <- nb.plot + labs(color = "Neighborhood", linetype = "Number of Pickups", 
+                  x = "Hour of Week", y = "Total Number of Pickups") + 
+    scale_linetype_manual(values = c(4, 1)) + theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+    scale_x_discrete(breaks = 24*0:6, labels = levels(neighborhoods_yellow$weekday))
+  nb.plot
+}
+
 neighborhoods.interest <- c("LaGuardia Airport", "Bushwick and Williamsburg", "East Harlem", 
                             "Greenpoint", "Jamaica")
 neighborhoods.interest2 <- c("Chelsea and Clinton", "Upper East Side", "Greenwich Village and Soho",
                              "Lower East Side")
 
-neighborhoods_yellow <- filter(all.combined.buckets, type == "yellow" & 
-                                 neighborhood %in% neighborhoods.interest)
-neighborhoods_yellow$num_hour <- with(neighborhoods_yellow, (as.numeric(weekday)-1)*24 + weekhour)
-ggplot(neighborhoods_yellow, aes(x=num_hour, y = observed, color = neighborhood, linetype = "Observed")) + 
-    geom_smooth(fill=NA) + geom_smooth(aes(y = expected, color = neighborhood, linetype = "Expected"),
-    fill=NA) + labs(color = "Neighborhood", linetype = "Number of Pickups", x = "Hour of week",
-                    y = "Total Number of Pickups", title = "Yellow Cabs") + 
-    scale_linetype_manual(values = c(4, 1)) + theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
-    scale_x_discrete(breaks = 24*0:6, labels = levels(neighborhoods_yellow$weekday))
+q1 <- plot.neighborhoods.color(neighborhoods.interest) + title("Yellow Cabs")
+q2 <- plot.neighborhoods.color(neighborhoods.interest2) + title("Yellow Cabs")
+q1
+q2
 
 yellow.weekday.counts <- as.data.frame(summarize(group_by(yellow, weekday), mean(count)))
 green.weekday.counts <- as.data.frame(summarize(group_by(green, weekday), mean(count)))

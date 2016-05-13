@@ -1,0 +1,120 @@
+weekhour,weekday,neighborhood,observed,expected,type
+0,Mon,Chelsea and Clinton,1173,3418.69216163427,uber
+1,Mon,Chelsea and Clinton,810,2979.24397452952,uber
+2,Mon,Chelsea and Clinton,596,2662.46088489451,uber
+3,Mon,Chelsea and Clinton,23801,75459.1554797994,yellow
+4,Mon,Chelsea and Clinton,23631,73068.1877239507,yellow
+0,Tue,Chelsea and Clinton,1467,4217.7810163813,uber
+1,Tue,Chelsea and Clinton,873,3675.76043355715,uber
+2,Tue,Chelsea and Clinton,33695,90701.8911634941,yellow
+2,Tue,Chelsea and Clinton,600,3284.91673063944,uber
+3,Tue,Chelsea and Clinton,22649,85654.2025462913,yellow
+3,Tue,Chelsea and Clinton,720,3033.26445224056,uber
+4,Tue,Chelsea and Clinton,21376,82940.1987234425,yellow
+5,Tue,Chelsea and Clinton,30323,82534.4009051829,yellow
+0,Wed,Chelsea and Clinton,1758,4429.48133645389,uber
+1,Wed,Chelsea and Clinton,1112,3860.17948450488,uber
+2,Wed,Chelsea and Clinton,37878,90720.916456994,yellow
+2,Wed,Chelsea and Clinton,737,3449.72649908254,uber
+3,Wed,Chelsea and Clinton,25089,85673.85545379,yellow
+3,Wed,Chelsea and Clinton,951,3185.38570267548,uber
+4,Wed,Chelsea and Clinton,23744,82959.2289169997,yellow
+4,Wed,Chelsea and Clinton,1100,3055.79844156482,uber
+5,Wed,Chelsea and Clinton,30593,82551.7130161093,yellow
+16,Wed,Chelsea and Clinton,108075,184922.642689785,yellow
+0,Thu,Chelsea and Clinton,2187,4794.34319263913,uber
+1,Thu,Chelsea and Clinton,1432,4178.22948701038,uber
+2,Thu,Chelsea and Clinton,994,3733.95823651359,uber
+3,Thu,Chelsea and Clinton,33807,87711.4971990606,yellow
+3,Thu,Chelsea and Clinton,1156,3447.70199710134,uber
+4,Thu,Chelsea and Clinton,28670,84932.3067842367,yellow
+5,Thu,Chelsea and Clinton,32734,84513.4350555651,yellow
+16,Thu,Chelsea and Clinton,103005,189317.06178183,yellow
+2,Fri,Chelsea and Clinton,1214,3470.391288184,uber
+16,Fri,Chelsea and Clinton,99051,177714.393373013,yellow
+5,Sat,Chelsea and Clinton,34101,84371.2189004518,yellow
+6,Sat,Chelsea and Clinton,35129,86310.1331436711,yellow
+13,Sat,Chelsea and Clinton,4253,7399.93793828021,uber
+2,Thu,East Harlem,516,3161.14156085883,green
+3,Thu,East Harlem,339,2877.3576613253,green
+3,Fri,East Harlem,424,3004.95049060472,green
+0,Mon,Gramercy Park and Murray Hill,451,2237.51686168029,uber
+1,Mon,Gramercy Park and Murray Hill,229,1949.93861123404,uber
+2,Mon,Gramercy Park and Murray Hill,11414,55633.3507372418,yellow
+2,Mon,Gramercy Park and Murray Hill,209,1742.46438679862,uber
+3,Mon,Gramercy Park and Murray Hill,7180,52536.2418883749,yellow
+4,Mon,Gramercy Park and Murray Hill,9017,50874.6043197722,yellow
+0,Tue,Gramercy Park and Murray Hill,630,2760.51650655694,uber
+1,Tue,Gramercy Park and Murray Hill,366,2405.71940049738,uber
+2,Tue,Gramercy Park and Murray Hill,14501,63148.5531954307,yellow
+2,Tue,Gramercy Park and Murray Hill,241,2149.83455689903,uber
+3,Tue,Gramercy Park and Murray Hill,8612,59633.0729968996,yellow
+3,Tue,Gramercy Park and Murray Hill,387,1985.25636030922,uber
+4,Tue,Gramercy Park and Murray Hill,8951,57746.9739753248,yellow
+0,Wed,Gramercy Park and Murray Hill,810,2899.01623837219,uber
+1,Wed,Gramercy Park and Murray Hill,406,2526.41836788272,uber
+2,Wed,Gramercy Park and Murray Hill,16730,63161.7990025823,yellow
+2,Wed,Gramercy Park and Murray Hill,285,2257.6509132283,uber
+3,Wed,Gramercy Park and Murray Hill,9988,59645.5814099162,yellow
+3,Wed,Gramercy Park and Murray Hill,406,2084.8599934823,uber
+4,Wed,Gramercy Park and Murray Hill,9708,57759.0867671808,yellow
+0,Thu,Gramercy Park and Murray Hill,982,3137.75002702813,uber
+1,Thu,Gramercy Park and Murray Hill,569,2734.46874742571,uber
+2,Thu,Gramercy Park and Murray Hill,20843,64662.7477852062,yellow
+2,Thu,Gramercy Park and Murray Hill,340,2443.664512205,uber
+3,Thu,Gramercy Park and Murray Hill,11836,61062.972368056,yellow
+3,Thu,Gramercy Park and Murray Hill,510,2256.50365339573,uber
+4,Thu,Gramercy Park and Murray Hill,11323,59130.4839657135,yellow
+2,Fri,Gramercy Park and Murray Hill,532,2271.21955564669,uber
+5,Sat,Gramercy Park and Murray Hill,15288,58741.0067921814,yellow
+16,Tue,Greenpoint,2811,6595.77915130377,green
+15,Wed,Greenpoint,2581,6230.2475102937,green
+16,Wed,Greenpoint,2890,6744.52405663398,green
+14,Thu,Greenpoint,2400,6088.43730915376,green
+15,Thu,Greenpoint,2707,6745.5490918615,green
+16,Thu,Greenpoint,3245,7302.36127057506,green
+13,Fri,Greenpoint,1968,5599.43736631303,green
+14,Fri,Greenpoint,2352,6358.42145210784,green
+15,Fri,Greenpoint,3101,7104.31406454461,green
+7,Sat,Greenpoint,825,3987.12327169369,green
+8,Sat,Greenpoint,1031,4143.64285620563,green
+9,Sat,Greenpoint,1395,4471.07777777606,green
+0,Tue,Greenwich Village and Soho,745,2597.03922641836,uber
+1,Tue,Greenwich Village and Soho,468,2263.25313976835,uber
+2,Tue,Greenwich Village and Soho,347,2022.48193839209,uber
+1,Wed,Greenwich Village and Soho,596,2376.75755162997,uber
+2,Wed,Greenwich Village and Soho,397,2123.95324110053,uber
+1,Thu,Greenwich Village and Soho,775,2572.53401079533,uber
+2,Thu,Greenwich Village and Soho,495,2298.86064502067,uber
+5,Sun,Northwest Brooklyn,1260,4410.64174038839,green
+6,Sun,Northwest Brooklyn,1014,4292.61284903008,green
+7,Sun,Northwest Brooklyn,1125,4355.82804546383,green
+3,Mon,Northwest Brooklyn,630,3778.88589927006,green
+4,Mon,Northwest Brooklyn,581,3432.37733268358,green
+2,Tue,Northwest Brooklyn,1002,4585.60826194317,green
+3,Tue,Northwest Brooklyn,495,4104.15835769663,green
+4,Tue,Northwest Brooklyn,463,3727.8236210897,green
+2,Wed,Northwest Brooklyn,1145,4689.02074000794,green
+3,Wed,Northwest Brooklyn,515,4196.71340424563,green
+4,Wed,Northwest Brooklyn,463,3876.70990846262,green
+5,Wed,Northwest Brooklyn,803,3592.90783686162,green
+2,Thu,Northwest Brooklyn,1215,5034.22692034604,green
+3,Thu,Northwest Brooklyn,592,4543.82209471442,green
+4,Thu,Northwest Brooklyn,578,4127.17197009233,green
+5,Thu,Northwest Brooklyn,821,3825.03433724832,green
+3,Fri,Northwest Brooklyn,913,4745.31220649285,green
+4,Fri,Northwest Brooklyn,795,4346.67741271007,green
+5,Fri,Northwest Brooklyn,892,4096.97137005481,green
+5,Sat,Northwest Brooklyn,1108,5234.90910620781,green
+6,Sat,Northwest Brooklyn,1089,5094.82279801611,green
+7,Sat,Northwest Brooklyn,1452,5169.85174548909,green
+1,Tue,Upper East Side,9013,47690.5248682809,yellow
+2,Tue,Upper East Side,5311,44090.1965509412,yellow
+3,Tue,Upper East Side,3680,41635.6951398876,yellow
+4,Tue,Upper East Side,5836,40317.2372348782,yellow
+1,Wed,Upper East Side,9945,47700.528256536,yellow
+2,Wed,Upper East Side,5901,44099.4447476336,yellow
+3,Wed,Upper East Side,4111,41643.6087632561,yellow
+2,Thu,Upper East Side,6896,45147.4042572359,yellow
+3,Thu,Upper East Side,4803,42633.2088833337,yellow
+4,Thu,Upper East Side,6388,41284.7884595593,yellow

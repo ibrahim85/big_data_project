@@ -1,0 +1,42 @@
+weekhour,weekday,neighborhood,observed,expected,type
+0,Mon,Chelsea and Clinton,1173,3370.3049155687,uber
+1,Mon,Chelsea and Clinton,810,2916.4465921052,uber
+2,Mon,Chelsea and Clinton,596,2650.79047507685,uber
+0,Tue,Chelsea and Clinton,1467,4097.62965984176,uber
+1,Tue,Chelsea and Clinton,873,3587.22755759743,uber
+2,Tue,Chelsea and Clinton,600,3260.47069312128,uber
+3,Tue,Chelsea and Clinton,720,3029.39630747709,uber
+0,Wed,Chelsea and Clinton,1758,4331.57537404873,uber
+1,Wed,Chelsea and Clinton,1112,3770.08727756221,uber
+2,Wed,Chelsea and Clinton,737,3426.67390948396,uber
+3,Wed,Chelsea and Clinton,951,3165.39472597038,uber
+0,Thu,Chelsea and Clinton,2187,4712.56003482102,uber
+1,Thu,Chelsea and Clinton,1432,4125.56200220278,uber
+2,Thu,Chelsea and Clinton,994,3749.76880748709,uber
+3,Thu,Chelsea and Clinton,1156,3423.87735785833,uber
+2,Fri,Chelsea and Clinton,1214,3361.32719205806,uber
+13,Sat,Chelsea and Clinton,4253,7584.89640064372,uber
+14,Sat,Chelsea and Clinton,5227,8491.61631029018,uber
+0,Mon,Gramercy Park and Murray Hill,451,2227.7116326433,uber
+1,Mon,Gramercy Park and Murray Hill,229,1938.94058374784,uber
+2,Mon,Gramercy Park and Murray Hill,209,1721.88085526342,uber
+0,Tue,Gramercy Park and Murray Hill,630,2708.4603583867,uber
+1,Tue,Gramercy Park and Murray Hill,366,2357.37140812833,uber
+2,Tue,Gramercy Park and Murray Hill,241,2117.91241835898,uber
+3,Tue,Gramercy Park and Murray Hill,387,2002.37710329381,uber
+0,Wed,Gramercy Park and Murray Hill,810,2846.52472556669,uber
+1,Wed,Gramercy Park and Murray Hill,406,2477.53893823954,uber
+2,Wed,Gramercy Park and Murray Hill,285,2212.99167183704,uber
+3,Wed,Gramercy Park and Murray Hill,406,2104.44872002098,uber
+0,Thu,Gramercy Park and Murray Hill,982,3078.9687859431,uber
+1,Thu,Gramercy Park and Murray Hill,569,2679.85202738034,uber
+2,Thu,Gramercy Park and Murray Hill,340,2421.65066226944,uber
+3,Thu,Gramercy Park and Murray Hill,510,2263.12206459752,uber
+2,Fri,Gramercy Park and Murray Hill,532,2183.42603638385,uber
+0,Tue,Greenwich Village and Soho,745,2604.79917720758,uber
+1,Tue,Greenwich Village and Soho,468,2267.14749036347,uber
+2,Tue,Greenwich Village and Soho,347,2025.0654540936,uber
+1,Wed,Greenwich Village and Soho,596,2368.92634063125,uber
+2,Wed,Greenwich Village and Soho,397,2128.29361453233,uber
+1,Thu,Greenwich Village and Soho,775,2577.28577578898,uber
+2,Thu,Greenwich Village and Soho,495,2302.08771686059,uber

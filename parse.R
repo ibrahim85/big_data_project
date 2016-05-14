@@ -349,12 +349,21 @@ q4 <- plot.neighborhoods.color(c("Greenpoint", "Bushwick and Williamsburg", "Cen
 q5 <- plot.neighborhoods.color(c("Midtown", "Jamaica", "Central Park", "Tribeca"), 
                                colorcab = "yellow") + ggtitle("Yellow Cabs")
 
-
+png("neighborhoods_interest1.png", width=600, height=400)
 q1
-q2
-q3
-q4
+dev.off()
 
+png("neighborhoods_interest2.png", width=600, height=400)
+q2
+dev.off()
+
+png("neighborhoods_interest3.png", width=600, height=400)
+q3
+dev.off()
+
+png("neighborhoods_interest4.png", width=600, height=400)
+q4
+dev.off()
 
 
 yellow.weekday.counts <- as.data.frame(summarize(group_by(yellow, weekday), mean(count)))
@@ -373,13 +382,13 @@ hourly.counts <- rbind(yellow.hourly.counts, green.hourly.counts, uber.hourly.co
 p1 <- ggplot(hourly.counts, aes(x=weekhour, y=`sum(count)`)) + geom_smooth(fill=NA, aes(color = type)) +
   ylab("Number of Pickups") + xlab("Hour of Day") + theme(legend.position="none") +
   scale_color_manual(values=c("green4", "gray32", "yellow3"))
-p1
 p2 <- ggplot(hourly.counts, aes(x=weekhour, y=log(`sum(count)`))) + geom_smooth(fill=NA, aes(color = type)) +
   ylab("Log Number of Pickups") + xlab("Hour of Day") + 
   scale_color_manual(values=c("green4", "gray32", "yellow3"))
-p2
 
+png("compare_num_pickups.png", width=1000, height=400)
 grid.arrange(p1,p2, nrow=1, widths = c(600, 700))
+dev.off()
 
 sum(combined.cv.poisson$glmnet.fit$beta[,100] != 0)
 combined.cv.poisson$glmnet.fit$beta[,100]
@@ -432,9 +441,17 @@ plot.relative.neighborhood <- function(hood) {
   p
 }
 
+png("relative_bushwick.png", width=600, height=400)
 plot.relative.neighborhood("Bushwick and Williamsburg")
+dev.off()
+
+png("relative_laguardia.png", width=600, height=400)
 plot.relative.neighborhood("LaGuardia Airport")
+dev.off()
+
+png("relative_eastharlem.png", width=600, height=400)
 plot.relative.neighborhood("East Harlem")
+dev.off()
 
 all.combined.brooklyn <- filter(all.combined.buckets, neighborhood %in% borough.neighborhoods[["Brooklyn"]])
 friday.night.brooklyn.uber <- filter(all.combined.brooklyn, type == "uber" & weekday == "Fri" & weekhour >= 21)

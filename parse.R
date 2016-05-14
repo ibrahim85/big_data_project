@@ -1,4 +1,3 @@
-setwd("~/Desktop/Big Data/Project/Project/")
 rm(list=ls())
 
 require(MASS)
@@ -103,7 +102,7 @@ green$borough <- relevel(green$borough, "Manhattan")
 yellow$borough <- relevel(yellow$borough, "Manhattan")
 uber$borough <- relevel(uber$borough, "Manhattan")
 
-View(green); View(yellow); View(uber)
+#View(green); View(yellow); View(uber)
 str(green); str(yellow); str(uber)
 dim(green); dim(yellow); dim(uber)
 nlevels(green$neighborhood); nlevels(yellow$neighborhood); nlevels(uber$neighborhood)
@@ -242,9 +241,9 @@ high.yellow.buckets <- add.observed.expected(high.yellow.buckets, predicted.coun
 low.uber.buckets <- add.observed.expected(low.uber.buckets, predicted.counts.uber, uber)
 high.uber.buckets <- add.observed.expected(high.uber.buckets, predicted.counts.uber, uber)
 
-View(low.green.buckets); View(high.green.buckets)
-View(low.yellow.buckets); View(high.yellow.buckets)
-View(low.uber.buckets); View(high.uber.buckets)
+#View(low.green.buckets); View(high.green.buckets)
+#View(low.yellow.buckets); View(high.yellow.buckets)
+#View(low.uber.buckets); View(high.uber.buckets)
 
 write.csv(low.green.buckets, "low_green_buckets", quote = F, row.names = F)
 write.csv(high.green.buckets, "high_green_buckets", quote = F, row.names = F)
@@ -303,13 +302,13 @@ high.combined.buckets <- add.observed.expected(high.combined.buckets, predicted.
 write.csv(low.combined.buckets, "low_combined_buckets", quote = F, row.names = F)
 write.csv(high.combined.buckets, "high_combined_buckets", quote = F, row.names = F)
 table(low.combined.buckets$type); table(high.combined.buckets$type)
-View(low.combined.buckets); View(high.combined.buckets)
+#View(low.combined.buckets); View(high.combined.buckets)
 
 all.combined.buckets <- add.observed.expected(common.data[c(green.index, yellow.index, uber.index), 1:3],
                               predicted.counts.combined, data = common.data)
 all.combined.buckets$residual <- (all.combined.buckets$observed - all.combined.buckets$expected) /
                                     sqrt( all.combined.buckets$expected)
-View(all.combined.buckets)
+#View(all.combined.buckets)
 write.csv(all.combined.buckets, "all_combined_buckets", quote = F, row.names = F)
 
 monday.morning.yellow <- filter(all.combined.buckets, type == "yellow" & weekday == "Mon" & weekhour == 9)
@@ -401,7 +400,6 @@ green.pct <- c()
 uber.pct <- c()
 
 for (row in 1:nrow(totals)) {
-  print(row)
   hr <- totals[row, "weekhour"]
   day <- totals[row, "weekday"]
   area <- totals[row, "neighborhood"]
@@ -454,6 +452,8 @@ plot.relative.neighborhood("East Harlem")
 dev.off()
 
 all.combined.brooklyn <- filter(all.combined.buckets, neighborhood %in% borough.neighborhoods[["Brooklyn"]])
+all.combined.manhattan <- filter(all.combined.buckets, neighborhood %in% borough.neighborhoods[["Manhattan"]])
+
 friday.night.brooklyn.uber <- filter(all.combined.brooklyn, type == "uber" & weekday == "Fri" & weekhour >= 21)
 thursday.eve.brooklyn.uber <- filter(all.combined.brooklyn, type == "uber" & weekday == "Thu" & 
                                       weekhour >= 17 & weekhour < 22)
@@ -464,7 +464,35 @@ write.csv(friday.night.brooklyn.uber, "friday.night.brooklyn.uber", quote = F, r
 write.csv(thursday.eve.brooklyn.uber, "thursday.eve.brooklyn.uber", quote = F, row.names = F)
 write.csv(sunday.afternoon.brooklyn.uber, "sunday.afternoon.brooklyn.uber", quote = F, row.names = F)
 
-save.image("parse_buckets.RData")
+friday.brooklyn.uber <- filter(all.combined.brooklyn, type == "uber" & weekday == "Fri")
+thursday.brooklyn.uber <- filter(all.combined.brooklyn, type == "uber" & weekday == "Thu")
+sunday.brooklyn.uber <- filter(all.combined.brooklyn, type == "uber" & weekday == "Sun")
+
+friday.night.brooklyn.green <- filter(all.combined.brooklyn, type == "green" & weekday == "Fri" & weekhour >= 21)
+thursday.eve.brooklyn.green <- filter(all.combined.brooklyn, type == "green" & weekday == "Thu" & 
+                                       weekhour >= 17 & weekhour < 20)
+sunday.afternoon.brooklyn.green <- filter(all.combined.brooklyn, type == "green" & weekday == "Sun" & 
+                                           weekhour >= 12 & weekhour < 15)
+
+write.csv(friday.night.brooklyn.green, "friday.night.brooklyn.green", quote = F, row.names = F)
+write.csv(thursday.eve.brooklyn.green, "thursday.eve.brooklyn.green", quote = F, row.names = F)
+write.csv(sunday.afternoon.brooklyn.green, "sunday.afternoon.brooklyn.green", 
+          quote = F, row.names = F)
+
+friday.night.manhattan.yellow <- filter(all.combined.manhattan, type == "yellow" & weekday == "Fri" & weekhour >= 21)
+monday.morning.manhattan.yellow <- filter(all.combined.manhattan, type == "yellow" & weekday == "Mon" & 
+                                        weekhour >= 7 & weekhour < 10)
+wednesday.evening.manhattan.yellow <- filter(all.combined.manhattan, type == "yellow" & weekday == "Wed" & 
+                                            weekhour >= 17 & weekhour < 20)
+
+write.csv(friday.night.manhattan.yellow, "friday.night.manhattan.yellow", quote = F, row.names = F)
+write.csv(monday.morning.manhattan.yellow, "monday.morning.manhattan.yellow", quote = F, row.names = F)
+write.csv(wednesday.evening.manhattan.yellow, "wednesday.evening.manhattan.yellow", 
+          quote = F, row.names = F)
+
+
+#save.image("parse_buckets.RData")
+#load("parse_buckets.RData")
 
 
 

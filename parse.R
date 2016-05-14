@@ -7,6 +7,7 @@ require(ggplot2)
 require(dplyr)
 require(gridExtra)
 require(lme4)
+require(reshape2)
 
 green <- read.table("green_buckets", sep=",", stringsAsFactors = F)
 uber <- read.table("uber_buckets", sep=",", stringsAsFactors = F)
@@ -333,13 +334,28 @@ plot.neighborhoods.color <- function(neighborhoods.interest, colorcab = "yellow"
 
 neighborhoods.interest <- c("LaGuardia Airport", "Bushwick and Williamsburg", "East Harlem", 
                             "Greenpoint", "Jamaica")
-neighborhoods.interest2 <- c("Chelsea and Clinton", "Upper East Side", "Greenwich Village and Soho",
-                             "Lower East Side")
+neighborhoods.interest2 <- c("Gramercy Park and Murray Hill", "Upper East Side", 
+                             "Greenwich Village and Soho", "Lower East Side")
 
 q1 <- plot.neighborhoods.color(neighborhoods.interest) + ggtitle("Yellow Cabs")
 q2 <- plot.neighborhoods.color(neighborhoods.interest2) + ggtitle("Yellow Cabs")
+q3 <- plot.neighborhoods.color(c("Greenwich Village and Soho", "Gramercy Park and Murray Hill", 
+                                 "Chelsea and Clinton", "Lower East Side", "Upper East Side"), 
+                               colorcab = "uber") + ggtitle("Uber Pickups")
+q4 <- plot.neighborhoods.color(c("Greenpoint", "Bushwick and Williamsburg", "Central Harlem",
+                                 "West Queens", "East Harlem"), 
+                                colorcab = "green") + ggtitle("Green Cabs")
+
+q5 <- plot.neighborhoods.color(c("Midtown", "Jamaica", "Central Park", "Tribeca"), 
+                               colorcab = "yellow") + ggtitle("Yellow Cabs")
+
+
 q1
 q2
+q3
+q4
+
+
 
 yellow.weekday.counts <- as.data.frame(summarize(group_by(yellow, weekday), mean(count)))
 green.weekday.counts <- as.data.frame(summarize(group_by(green, weekday), mean(count)))
@@ -367,6 +383,69 @@ grid.arrange(p1,p2, nrow=1, widths = c(600, 700))
 
 sum(combined.cv.poisson$glmnet.fit$beta[,100] != 0)
 combined.cv.poisson$glmnet.fit$beta[,100]
+
+dots <- lapply(c("weekhour", "weekday", "neighborhood"), as.symbol)
+grouped <- group_by_(common.data, .dots=dots)
+totals <- as.data.frame(summarize(grouped, total=sum(count)))
+yellow.pct <- c()
+green.pct <- c()
+uber.pct <- c()
+
+for (row in 1:nrow(totals)) {
+  print(row)
+  hr <- totals[row, "weekhour"]
+  day <- totals[row, "weekday"]
+  area <- totals[row, "neighborhood"]
+  yellow.row <- filter(yellow, weekhour == hr & weekday == day & neighborhood == area)
+  green.row <- filter(green, weekhour == hr & weekday == day & neighborhood == area)
+  uber.row <- filter(uber, weekhour == hr & weekday == day & neighborhood == area)
+  yellow.count <- ifelse(nrow(yellow.row) == 0, 0, yellow.row$count)
+  green.count <- ifelse(nrow(green.row) == 0, 0, green.row$count)
+  uber.count <- ifelse(nrow(uber.row) == 0, 0, uber.row$count)
+  
+  yellow.pct <- c(yellow.pct, yellow.count/totals[row,"total"])
+  green.pct <- c(green.pct, green.count/totals[row,"total"])
+  uber.pct <- c(uber.pct, uber.count/totals[row,"total"])
+}
+
+nrow(totals) == length(yellow.pct) & nrow(totals) == length(green.pct) & 
+  nrow(totals) == length(uber.pct)
+
+totals$yellow.pct <- yellow.pct
+totals$green.pct <- green.pct
+totals$uber.pct <- uber.pct
+
+melted <- melt(totals, id.vars = c("weekday", "weekhour", "neighborhood"))
+melted <- filter(melted, variable != "total")
+
+plot.relative.neighborhood <- function(hood) {
+  melted.neighborhood <- filter(melted, neighborhood == hood)
+  melted.neighborhood$num_hour <- with(melted.neighborhood, (as.numeric(weekday)-1)*24 + weekhour)
+  p <- ggplot(melted.neighborhood, aes(x = num_hour, y = value, fill = variable)) 
+  p <- p + geom_bar(stat="identity") 
+  p <- p + theme(axis.text.x=element_text(angle = 90, hjust = 0.5))
+  p <- p + labs(fill = "Taxi Type", x = "Hour of Week", y = "% of All Pickups", 
+                title = hood)
+  p <- p + scale_x_discrete(breaks = 24*0:6, labels = levels(melted.neighborhood$weekday))
+  p <- p + scale_fill_manual(values = c(green.pct = "green4", uber.pct = "gray32", 
+                                        yellow.pct = "yellow3"))
+  p
+}
+
+plot.relative.neighborhood("Bushwick and Williamsburg")
+plot.relative.neighborhood("LaGuardia Airport")
+plot.relative.neighborhood("East Harlem")
+
+all.combined.brooklyn <- filter(all.combined.buckets, neighborhood %in% borough.neighborhoods[["Brooklyn"]])
+friday.night.brooklyn.uber <- filter(all.combined.brooklyn, type == "uber" & weekday == "Fri" & weekhour >= 21)
+thursday.eve.brooklyn.uber <- filter(all.combined.brooklyn, type == "uber" & weekday == "Thu" & 
+                                      weekhour >= 17 & weekhour < 22)
+sunday.afternoon.brooklyn.uber <- filter(all.combined.brooklyn, type == "uber" & weekday == "Sun" & 
+                                      weekhour >= 12 & weekhour < 17)
+
+write.csv(friday.night.brooklyn.uber, "friday.night.brooklyn.uber", quote = F, row.names = F)
+write.csv(thursday.eve.brooklyn.uber, "thursday.eve.brooklyn.uber", quote = F, row.names = F)
+write.csv(sunday.afternoon.brooklyn.uber, "sunday.afternoon.brooklyn.uber", quote = F, row.names = F)
 
 save.image("parse_buckets.RData")
 

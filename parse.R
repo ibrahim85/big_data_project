@@ -1,12 +1,33 @@
 rm(list=ls())
 
-require(MASS)
-require(glmnet)
-require(ggplot2)
-require(dplyr)
-require(gridExtra)
-require(lme4)
-require(reshape2)
+if(! require(MASS)) {
+  install.packages("MASS")
+  require(MASS)
+}
+if(! require(glmnet)) {
+  install.packages("glmnet")
+  require(glmnet)
+}
+if(! require(ggplot2)) {
+  install.packages("ggplot2")
+  require(ggplot2)
+}
+if(! require(dplyr)) {
+  install.packages("dplyr")
+  require(dplyr)
+}
+if(! require(gridExtra)) {
+  install.packages("gridExtra")
+  require(gridExtra)
+}
+if(! require(lme4)) {
+  install.packages("lme4")
+  require(lme4)
+}
+if(! require(reshape2)) {
+  install.packages("reshape2")
+  require(reshape2)
+}
 
 green <- read.table("green_buckets", sep=",", stringsAsFactors = F)
 uber <- read.table("uber_buckets", sep=",", stringsAsFactors = F)

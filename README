@@ -1,0 +1,22 @@
+After cloning, the Git repository, reproduce results and analyses:
+
+First, download the data by running:
+        bash download_data.sh
+Also download: github.com/fivethirtyeight/uber-tlc-foil-response/tree/master/uber-trip-data
+
+Install necessary packages by running:
+        python geocoder_files/setup.py install
+
+Next, run the location tool by running:
+        bash run_geocoder.sh
+
+Make sure all data files from the previous steps are local to your Hadoop cluster. To copy these files to HDFS and run the MapReduce tasks:
+        bash run_mapreduce.sh
+
+You should now have three folders in the data directory. Copy these to your local machine by running:
+        rsync -avP ./data/AprilSept2014/yellow_buckets/part-00000 yellow_buckets
+        rsync -avP ./data/AprilSept2014/green_buckets/part-00000 green_buckets
+        rsync -avP ./data/AprilSept2014/uber_buckets/part-00000 uber_buckets
+
+Run the analysis and output tables, coefficients, and plots by running:
+        python run_analysis.py

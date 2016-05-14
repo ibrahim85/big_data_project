@@ -46,3 +46,7 @@ do
     hjs -D mapreduce.job.reduces=1 -files map_bucket.py,combine_bucket.py,reduce_bucket.py -mapper map_bucket.py -combiner combine_bucket.py -reducer reduce_bucket.py -input /user/${username}/${color}trips/april/part-00000 -input /user/${username}/${color}trips/may/part-00000 -input /user/${username}/${color}trips/june/part-00000 -input /user/${username}/${color}trips/july/part-00000 -input /user/${username}/${color}trips/august/part-00000 -input /user/${username}/${color}trips/september/part-00000 -output ${color}trips/buckets
   done
 done
+
+hadoop fs -get yellowtrips/buckets data/AprilSept2014/yellow_buckets
+hadoop fs -get greentrips/buckets data/AprilSept2014/green_buckets
+hadoop fs -get ubertrips/buckets data/AprilSept2014/uber_buckets

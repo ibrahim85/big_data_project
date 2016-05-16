@@ -29,6 +29,8 @@ if(! require(reshape2)) {
   require(reshape2)
 }
 
+# setwd("~/Desktop/Big Data/Project/Project/")
+
 green <- read.table("green_buckets", sep=",", stringsAsFactors = F)
 uber <- read.table("uber_buckets", sep=",", stringsAsFactors = F)
 yellow <- read.table("yellow_buckets", sep=",", stringsAsFactors = F)
@@ -511,9 +513,30 @@ write.csv(monday.morning.manhattan.yellow, "monday.morning.manhattan.yellow", qu
 write.csv(wednesday.evening.manhattan.yellow, "wednesday.evening.manhattan.yellow", 
           quote = F, row.names = F)
 
+print.all.day <- function(day, color = "yellow", borough = "Manhattan", hours = 7:22) {
+  borough.filter <- filter(all.combined.buckets, type == color)
+  borough.filter <- filter(borough.filter, 
+                           neighborhood %in% borough.neighborhoods[[borough]])
+  borough.filter <- filter(borough.filter, weekday == day)
+  borough.filter <- filter(borough.filter, weekhour %in% hours)
+  folder_name <- paste(c(borough, day, color, 
+                         min(hours), "to", max(hours)), sep="", collapse = "_")
+  dir.create(folder_name)
+  for (h in hours) {
+    small <- filter(borough.filter, weekhour == h)
+    filename <- paste(c(borough, day, color, h), sep="", collapse = "_")
+    write.csv(small, sprintf("%s/%s", folder_name, filename),
+              quote = F, row.names = F)
+  }
+}
 
-#save.image("parse_buckets.RData")
-#load("parse_buckets.RData")
+print.all.day("Fri")
+print.all.day("Fri", borough = "Brooklyn")
+print.all.day("Sat", color = "green", borough = "Brooklyn")
+print.all.day("Sat", color = "uber", borough = "Brooklyn")
+
+# save.image("parse_buckets.RData")
+# load("parse_buckets.RData")
 
 
 
